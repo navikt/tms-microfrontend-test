@@ -25,10 +25,9 @@ spec:
     min: 2
     max: 4
   accessPolicy:
-    outbound:
+    inbound:
       rules:
-        - application: nav-dekoratoren
-          namespace: personbruker
+        - application: tms-min-side
   ingresses:
     - "https://www.intern.dev.nav.no/tms-microfrontend-test"
     - "https://www.ansatt.dev.nav.no/tms-microfrontend-test"
