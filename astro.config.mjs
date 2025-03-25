@@ -6,9 +6,9 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  base: "/tms-astro-template", // The base path of your site. Useful for projects hosted under subpaths.
+  base: "/tms-microfrontend-test",
   build: {
-    assetsPrefix: "https://cdn.nav.no/min-side/tms-astro-template", // Change this to your CDN prefix
+    assetsPrefix: "https://cdn.nav.no/min-side/tms-microfrontend-test",
   },
   integrations: [
     react(),

@@ -16,15 +16,15 @@ export const getEnvironment = () => {
 type EnvUrl = { development: string; production: string; local: string };
 
 const EXAMPLE_API_URL = {
-  local: 'http://localhost:3000/api/tms-astro-template',
+  local: 'http://localhost:3000/api/tms-microfrontend-test',
   development: 'http://example-your-api-app/api/something',
   production: 'http://example-your-api-app/api/something',
 };
 
 const BASE_URL: EnvUrl = {
-  local: 'http://localhost:4321/tms-astro-template',
-  development: 'https://www.ansatt.dev.nav.no/tms-astro-template/',
-  production: 'https://www.nav.no/tms-astro-template/',
+  local: 'http://localhost:4321/tms-microfrontend-test',
+  development: 'https://www.ansatt.dev.nav.no/tms-microfrontend-test/',
+  production: 'https://www.nav.no/tms-microfrontend-test/',
 };
 
 export const exampleApiUrl = EXAMPLE_API_URL[getEnvironment()];
