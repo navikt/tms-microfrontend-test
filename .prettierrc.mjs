@@ -2,9 +2,8 @@
 export default {
   plugins: ["prettier-plugin-astro"],
   semi: true,
-  singleQuote: true,
   tabWidth: 2,
-  printWidth: 80,
+  printWidth: 120,
   overrides: [
     {
       files: "*.astro",
