@@ -1,22 +1,22 @@
-const isProduction = window.location.href.includes('www.nav.no');
-const isDevelopment = window.location.href.includes('www.ansatt.dev.nav.no');
+const isProduction = window.location.href.includes("www.nav.no");
+const isDevelopment = window.location.href.includes("www.ansatt.dev.nav.no");
 
 export const getEnvironment = () => {
   if (isDevelopment) {
-    return 'development';
+    return "development";
   }
   if (isProduction) {
-    return 'production';
+    return "production";
   }
-  return 'local';
+  return "local";
 };
 
 type EnvUrl = { development: string; production: string; local: string };
 
 const BASE_URL: EnvUrl = {
-  local: 'http://localhost:3000',
-  development: 'https://www.ansatt.dev.nav.no/tms-microfrontend-test',
-  production: 'https://www.nav.no/tms-microfrontend-test',
+  local: "http://localhost:3000",
+  development: "https://www.ansatt.dev.nav.no/tms-microfrontend-test",
+  production: "https://www.nav.no/tms-microfrontend-test",
 };
 
 export const baseUrl = BASE_URL[getEnvironment()];
