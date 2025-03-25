@@ -2,7 +2,7 @@ import { defineMiddleware } from "astro/middleware";
 import { loginUrl } from "./urls";
 import { isInternal } from "./utils";
 import { isLocal } from "@src/utils/server/urls";
-import { getToken, validateToken } from "@navikt/oasis";
+import { getToken, validateTokenxToken} from "@navikt/oasis";
 import { localToken } from "@src/utils/server/token";
 
 export const onRequest = defineMiddleware(async (context, next) => {
@@ -23,7 +23,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return context.redirect(`${loginUrl}${params}`);
   }
 
-  const validation = await validateToken(token);
+  const validation = await validateTokenxToken(token);
 
   if (!validation.ok) {
     const error = new Error(
