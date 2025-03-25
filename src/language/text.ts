@@ -1,8 +1,8 @@
 export const text = {
   title: {
-    nb: "Norsk bokmål tms-microfrontend-test",
-    en: "English tms-microfrontend-test",
-    nn: "Norsk nynorsk tms-microfrontend-test",
+    nb: "Microfrontend [nb]",
+    en: "Microfrontend [en]",
+    nn: "Microfrontend [nn]",
   },
   name: {
     nb: "Navn",
