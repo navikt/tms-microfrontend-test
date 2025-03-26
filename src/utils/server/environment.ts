@@ -1,3 +1,4 @@
+
 const isDevelopment = process.env.NAIS_CLUSTER_NAME === "dev-gcp";
 export const isLocal = process.env.NODE_ENV === "development";
 
