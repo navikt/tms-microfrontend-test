@@ -1,15 +1,4 @@
-# tms-microfrontend-test IdPorten
-
-Dette er en AstroJS frontend template med IdPorten autentisering for eksterne brukere.
-
-# Kom i gang
-
-## Tilpasse templatet til ditt prosjekt
-
-`CMD + Shift + F` og søk etter `tms-microfrontend-test` og erstatt dette med ditt applikasjons navn.
-
-NOTE: Du bør se på konteksten i filen du endrer.
-
+# tms-microfrontend-test
 
 #  Kjøre appen lokalt
 
