@@ -7,6 +7,8 @@ import { getToken, validateTokenxToken } from "@navikt/oasis";
 export const onRequest = defineMiddleware(async (context, next) => {
   const token = getToken(context.request.headers);
   const params = encodeURIComponent(context.url.search);
+  console.info("Debug: ", token);
+  console.info("Headers: ", context.request.headers);
 
   if (isLocal) {
     return next();
@@ -22,7 +24,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   const validation = await validateTokenxToken(token);
-  console.info("Debug: ", token);
 
   if (!validation.ok) {
     const error = new Error(
