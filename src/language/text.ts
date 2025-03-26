@@ -1,8 +1,8 @@
 export const text = {
   title: {
-    nb: "Microfrontend [nb]",
-    en: "Microfrontend [en]",
-    nn: "Microfrontend [nn]",
+    nb: "SSR microfrontend [nb]",
+    en: "SSR Microfrontend [en]",
+    nn: "SSR Microfrontend [nn]",
   },
   name: {
     nb: "Navn",
