@@ -1,6 +1,6 @@
 # tms-microfrontend-test
 
-#  Kjøre appen lokalt
+##  Kjøre appen lokalt
 
 1. Installer dependencies: `npm i`
 2. Bygge tms-microfrontend-test: `npm run build`
