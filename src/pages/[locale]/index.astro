@@ -2,7 +2,6 @@
 import { text } from "../../language/text";
 import { Heading } from "@navikt/ds-react";
 import type { Language } from "../../language/language";
-import AstroIslandExample from "@src/components/astro-island/AstroIsland.astro";
 
 const language = Astro.currentLocale as Language;
 ---
@@ -11,5 +10,4 @@ const language = Astro.currentLocale as Language;
   <Heading size={"large"}>
     {text.title[language]}
   </Heading>
-  <AstroIslandExample server:defer />
 </section>
