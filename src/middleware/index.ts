@@ -22,6 +22,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   const validation = await validateTokenxToken(token);
+  console.info("Debug: ", token);
 
   if (!validation.ok) {
     const error = new Error(
