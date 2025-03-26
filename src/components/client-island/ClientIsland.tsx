@@ -1,11 +1,9 @@
-import { Button, Heading } from "@navikt/ds-react";
+import { Button } from "@navikt/ds-react";
 
 const ClientIsland = () => {
   return (
     <div>
-      <Heading size="small" level="3">
-        Client-side component
-      </Heading>
+      <p>Client-side component</p>
       <Button onClick={() => console.log("clicked")}>Button</Button>
     </div>
   );

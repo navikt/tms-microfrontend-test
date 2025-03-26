@@ -3,11 +3,12 @@ import { text } from "../language/text";
 import { Heading } from "@navikt/ds-react";
 import ClientIsland from "../components/client-island/ClientIsland";
 import type { Language } from "../language/language";
+import styles from "./_index.module.css";
 
 const language = Astro.currentLocale as Language;
 ---
 
-<section>
+<section class={styles.microfrontend}>
   <Heading size="medium" level="2">
     {text.title[language]}
   </Heading>
