@@ -59,7 +59,7 @@ jobs:
       url: "http://tms-microfrontend-test/tms-microfrontend-test"
       commitmsg: ${{ github.event.head_commit.message}}
       ssr: true
-      secrets: inherit
+    secrets: inherit
 
   deploy-dev:
     runs-on: "ubuntu-latest"
