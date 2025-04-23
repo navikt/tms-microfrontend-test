@@ -4,13 +4,16 @@ import { Heading } from "@navikt/ds-react";
 import ClientIsland from "../components/client-island/ClientIsland";
 import type { Language } from "../types";
 import styles from "./_index.module.css";
+import "./_ds.css";
 
 const language = Astro.currentLocale as Language;
 ---
 
-<section class={styles.microfrontend}>
-  <Heading size="medium" level="2">
-    {text.title[language]}
-  </Heading>
-  <ClientIsland client:only="react" />
+<section class="tms-microfrontend-test">
+  <div class={styles.microfrontend}>
+    <Heading size="medium" level="2">
+      {text.title[language]}
+    </Heading>
+    <ClientIsland client:only="react" />
+  </div>
 </section>

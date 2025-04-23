@@ -3,12 +3,24 @@ import { rollupImportMapPlugin } from "rollup-plugin-import-map";
 import importmap from "./importmap.json";
 import react from "@astrojs/react";
 import node from "@astrojs/node";
+import prefixer from "postcss-prefix-selector";
 
 // https://astro.build/config
 export default defineConfig({
   base: "/tms-microfrontend-test",
   build: {
     assetsPrefix: "https://cdn.nav.no/min-side/tms-microfrontend-test",
+  },
+  vite: {
+    css: {
+      postcss: {
+        plugins: [
+          prefixer({
+            prefix: ".tms-microfrontend-test",
+          }),
+        ],
+      },
+    },
   },
   integrations: [
     react(),
@@ -37,5 +49,5 @@ export default defineConfig({
   output: "server",
   adapter: node({
     mode: "standalone",
-  })
+  }),
 });
