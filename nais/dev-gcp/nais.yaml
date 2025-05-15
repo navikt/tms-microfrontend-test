@@ -8,7 +8,7 @@ metadata:
 spec:
   tokenx:
     enabled: true
-  image: {{ image }}
+  image: { { image } }
   port: 3000
   liveness:
     path: /tms-microfrontend-test/api/internal/isAlive
@@ -23,6 +23,10 @@ spec:
     inbound:
       rules:
         - application: tms-min-side
+  observability:
+    logging:
+      destinations:
+        - id: loki
   ingresses:
     - "https://www.intern.dev.nav.no/tms-microfrontend-test"
     - "https://www.ansatt.dev.nav.no/tms-microfrontend-test"
@@ -32,3 +36,6 @@ spec:
     requests:
       cpu: "20m"
       memory: 128Mi
+  env:
+    - name: EXAMPLE_API_URL
+      value: "https://example.dev.nav.no/api"

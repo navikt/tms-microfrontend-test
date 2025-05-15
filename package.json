@@ -27,7 +27,8 @@
     "react-dom": "18.2.0",
     "prettier-plugin-astro": "^0.14.1",
     "rollup-plugin-import-map": "3.0.0",
-    "swr": "2.2.5"
+    "swr": "2.2.5",
+    "pino-http": "^10.4.0"
   },
   "devDependencies": {
     "@hono/node-server": "1.11.2",
