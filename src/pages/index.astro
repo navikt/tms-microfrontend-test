@@ -1,10 +1,24 @@
 ---
+import pino from "pino-http";
 import { text } from "../language/text";
-import { Heading } from "@navikt/ds-react";
+import { BodyShort, Heading } from "@navikt/ds-react";
 import ClientIsland from "../components/client-island/ClientIsland";
 import type { Language } from "../types";
 import styles from "../styles/index.module.css";
 import "../styles/ds.css";
+
+let isError: boolean = false;
+const logger = pino().logger;
+const exampleApiUrl = import.meta.env.EXAMPLE_API_URL;
+
+const exampleData: any = await fetch(exampleApiUrl)
+  .then((response) => response.json())
+  .then((data) => data)
+  .catch((error) => {
+    logger.error("Error fetching example data:", error);
+    Astro.response.status = 503;
+    isError = true;
+  });
 
 const language = Astro.currentLocale as Language;
 ---
@@ -14,6 +28,9 @@ const language = Astro.currentLocale as Language;
     <Heading size="medium" level="2">
       {text.title[language]}
     </Heading>
+    <BodyShort>
+      {text.name[language]}: {exampleData?.name}
+    </BodyShort>
     <ClientIsland client:only="react" />
   </div>
 </section>
