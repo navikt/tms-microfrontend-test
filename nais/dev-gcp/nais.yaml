@@ -23,10 +23,6 @@ spec:
     inbound:
       rules:
         - application: tms-min-side
-  observability:
-    logging:
-      destinations:
-        - id: loki
   ingresses:
     - "https://www.intern.dev.nav.no/tms-microfrontend-test"
     - "https://www.ansatt.dev.nav.no/tms-microfrontend-test"
