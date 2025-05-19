@@ -1,6 +1,6 @@
-import {defineMiddleware} from "astro/middleware";
-import {isInternal, isLocal} from "../utils/server/environment";
-import {getToken, validateTokenxToken} from "@navikt/oasis";
+import { defineMiddleware } from "astro/middleware";
+import { isInternal, isLocal } from "../utils/server/environment";
+import { getToken, validateTokenxToken } from "@navikt/oasis";
 
 export const onRequest = defineMiddleware(async (context, next) => {
   const token = getToken(context.request.headers);
@@ -15,7 +15,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   if (!token) {
     console.info("Could not find any bearer token on the request.");
-    return new Response(null, {status: 401});
+    return new Response(null, { status: 401 });
   }
 
   const validation = await validateTokenxToken(token);
@@ -23,7 +23,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   if (!validation.ok) {
     const error = new Error(`Invalid JWT token found (cause: ${validation.errorType} ${validation.error}.`);
     console.error(error);
-    return new Response(null, {status: 401});
+    return new Response(null, { status: 401 });
   }
 
   context.locals.token = token;
