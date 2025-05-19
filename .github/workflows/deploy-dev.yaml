@@ -58,6 +58,8 @@ jobs:
       id: "tms-microfrontend-test"
       url: "http://tms-microfrontend-test/tms-microfrontend-test"
       commitmsg: ${{ github.event.head_commit.message}}
+      appname: "tms-microfrontend-test"
+      namespace: "min-side"
       ssr: true
     secrets: inherit
 
