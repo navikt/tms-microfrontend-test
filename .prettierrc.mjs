@@ -4,7 +4,6 @@ export default {
   semi: true,
   tabWidth: 2,
   printWidth: 120,
-  bracketSpacing: false,
   overrides: [
     {
       files: "*.astro",

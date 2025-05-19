@@ -1,4 +1,4 @@
-import { Button } from "@navikt/ds-react";
+import {Button} from "@navikt/ds-react";
 import styles from "../../styles/test.module.css";
 
 const ClientIsland = () => {
