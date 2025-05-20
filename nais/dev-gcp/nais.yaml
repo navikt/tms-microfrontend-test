@@ -16,10 +16,6 @@ spec:
   readiness:
     path: /tms-microfrontend-test/api/internal/isReady
     initialDelay: 10
-  observability:
-    logging:
-      destinations:
-        - id: loki
   replicas:
     min: 2
     max: 4
