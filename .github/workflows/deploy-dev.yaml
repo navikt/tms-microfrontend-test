@@ -60,6 +60,7 @@ jobs:
       commitmsg: ${{ github.event.head_commit.message}}
       appname: "tms-microfrontend-test"
       namespace: "min-side"
+      fallback: "http://tms-microfrontend-test.dev.nav.no/fallback"
       ssr: true
     secrets: inherit
 
