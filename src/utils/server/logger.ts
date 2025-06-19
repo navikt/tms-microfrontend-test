@@ -1,6 +1,8 @@
 import { logs, NodeSDK, tracing } from "@opentelemetry/sdk-node";
 import pino from "pino";
 
+console.log("Test - code outside of function is running");
+
 // configure the SDK to export telemetry data to the console
 // enable all auto-instrumentations from the meta package
 const sdk = new NodeSDK({
