@@ -14,8 +14,7 @@ const exampleData: any = await fetch(exampleApiUrl)
   .then((response) => response.json())
   .then((data) => data)
   .catch((error) => {
-    logger.error("Error fetching example data:", error);
-    console.log(error);
+    logger.error(error);
     Astro.response.status = 503;
     isError = true;
   });
